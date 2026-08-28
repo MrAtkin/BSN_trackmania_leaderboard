@@ -12,10 +12,12 @@
         .control-group { display: flex; align-items: center; }
         select { padding: 10px; font-size: 16px; margin-left: 10px; border-radius: 4px; border: 1px solid #ccc; }
         table { width: 100%; border-collapse: collapse; margin-top: 20px; }
-        th, td { padding: 12px; text-align: center; border-bottom: 1px solid #ddd; }
+        /* Added white-space: nowrap to prevent times from stacking vertically */
+        th, td { padding: 12px; text-align: center; border-bottom: 1px solid #ddd; white-space: nowrap; }
         th { background-color: #2c3e50; color: white; }
         tr:hover { background-color: #f1f1f1; }
-        .data-table { display: none; }
+        /* Added overflow-x: auto to create a horizontal scrollbar */
+        .data-table { display: none; overflow-x: auto; width: 100%; -webkit-overflow-scrolling: touch; }
         .data-table.active { display: block; }
         .footnote { text-align: center; font-size: 0.85em; color: #7f8c8d; margin-top: 25px; font-style: italic; display: flex; flex-direction: column; gap: 5px; }
     </style>
