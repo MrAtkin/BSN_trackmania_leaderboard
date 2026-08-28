@@ -18,6 +18,7 @@
         .data-table { display: none; overflow-x: auto; width: 100%; -webkit-overflow-scrolling: touch; }
         .data-table.active { display: block; }
         .footnote { text-align: center; font-size: 0.85em; color: #7f8c8d; margin-top: 25px; font-style: italic; display: flex; flex-direction: column; gap: 5px; }
+        .fastest-time { color: #27ae60; font-weight: 800; }
     </style>
     <script>
         function updateView() {
@@ -47,7 +48,6 @@
         <div class="control-group">
             <label style="font-size: 18px; font-weight: bold;">Select Season:</label>
             <select id="seasonSelect" onchange="updateView()">
-                <option value="Summer_2026">Summer 2026</option>
                 <option value="Spring_2026">Spring 2026</option>
             </select>
         </div>
@@ -59,12 +59,12 @@
             </select>
         </div>
     </div>
-    <div id="times-Summer_2026" class="data-table active">
+    <div id="times-Spring_2026" class="data-table active">
         <table>
             <thead>
                 <tr>
                     <th>Rank</th>
-                    <th>Student Name</th>
+                    <th>Name</th>
                     <th>T1 Time</th>
                     <th>T2 Time</th>
                     <th>T3 Time</th>
@@ -75,113 +75,7 @@
                     <th>T8 Time</th>
                     <th>T9 Time</th>
                     <th>T10 Time</th>
-                    <th>Total Time</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td><strong>1</strong></td>
-                    <td style="text-align: left;">Test2</td>
-                    <td>04:00.000</td>
-                    <td>04:00.000</td>
-                    <td>04:00.000</td>
-                    <td>04:00.000</td>
-                    <td>04:00.000</td>
-                    <td>04:00.000</td>
-                    <td>04:00.000</td>
-                    <td>04:00.000</td>
-                    <td>04:00.000</td>
-                    <td>04:00.000</td>
-                    <td><strong>40:00.000</strong></td>
-                </tr>
-                <tr>
-                    <td><strong>2</strong></td>
-                    <td style="text-align: left;">Test1</td>
-                    <td><span style="color: #e74c3c; font-size: 0.9em;">NO TIME</span></td>
-                    <td><span style="color: #e74c3c; font-size: 0.9em;">NO TIME</span></td>
-                    <td><span style="color: #e74c3c; font-size: 0.9em;">NO TIME</span></td>
-                    <td><span style="color: #e74c3c; font-size: 0.9em;">NO TIME</span></td>
-                    <td><span style="color: #e74c3c; font-size: 0.9em;">NO TIME</span></td>
-                    <td><span style="color: #e74c3c; font-size: 0.9em;">NO TIME</span></td>
-                    <td><span style="color: #e74c3c; font-size: 0.9em;">NO TIME</span></td>
-                    <td><span style="color: #e74c3c; font-size: 0.9em;">NO TIME</span></td>
-                    <td><span style="color: #e74c3c; font-size: 0.9em;">NO TIME</span></td>
-                    <td><span style="color: #e74c3c; font-size: 0.9em;">NO TIME</span></td>
-                    <td><strong>50:00.000</strong></td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
-    <div id="scores-Summer_2026" class="data-table">
-        <table>
-            <thead>
-                <tr>
-                    <th>Rank</th>
-                    <th>Student Name</th>
-                    <th>T1 Score</th>
-                    <th>T2 Score</th>
-                    <th>T3 Score</th>
-                    <th>T4 Score</th>
-                    <th>T5 Score</th>
-                    <th>T6 Score</th>
-                    <th>T7 Score</th>
-                    <th>T8 Score</th>
-                    <th>T9 Score</th>
-                    <th>T10 Score</th>
-                    <th>Total Score</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td><strong>1</strong></td>
-                    <td style="text-align: left;">Test2</td>
-                    <td>150</td>
-                    <td>150</td>
-                    <td>150</td>
-                    <td>150</td>
-                    <td>150</td>
-                    <td>150</td>
-                    <td>150</td>
-                    <td>150</td>
-                    <td>150</td>
-                    <td>150</td>
-                    <td><strong>1500</strong></td>
-                </tr>
-                <tr>
-                    <td><strong>2</strong></td>
-                    <td style="text-align: left;">Test1</td>
-                    <td>0</td>
-                    <td>0</td>
-                    <td>0</td>
-                    <td>0</td>
-                    <td>0</td>
-                    <td>0</td>
-                    <td>0</td>
-                    <td>0</td>
-                    <td>0</td>
-                    <td>0</td>
-                    <td><strong>0</strong></td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
-    <div id="times-Spring_2026" class="data-table ">
-        <table>
-            <thead>
-                <tr>
-                    <th>Rank</th>
-                    <th>Student Name</th>
-                    <th>T1 Time</th>
-                    <th>T2 Time</th>
-                    <th>T3 Time</th>
-                    <th>T4 Time</th>
-                    <th>T5 Time</th>
-                    <th>T6 Time</th>
-                    <th>T7 Time</th>
-                    <th>T8 Time</th>
-                    <th>T9 Time</th>
-                    <th>T10 Time</th>
-                    <th>Total Time</th>
+                    <th>Total</th>
                 </tr>
             </thead>
             <tbody>
@@ -190,41 +84,41 @@
                     <td style="text-align: left;">Bruno Zannelli</td>
                     <td>00:21.935</td>
                     <td>00:23.891</td>
-                    <td>00:22.025</td>
-                    <td>00:22.691</td>
-                    <td>00:26.667</td>
-                    <td>00:22.348</td>
+                    <td class="fastest-time">00:22.025</td>
+                    <td class="fastest-time">00:22.691</td>
+                    <td class="fastest-time">00:26.667</td>
+                    <td class="fastest-time">00:22.348</td>
                     <td>00:29.152</td>
-                    <td>00:24.561</td>
+                    <td class="fastest-time">00:24.561</td>
                     <td>00:23.848</td>
-                    <td>00:29.465</td>
+                    <td class="fastest-time">00:29.465</td>
                     <td><strong>04:06.583</strong></td>
                 </tr>
                 <tr>
                     <td><strong>2</strong></td>
                     <td style="text-align: left;">Gregory Vollmer</td>
                     <td>00:21.634</td>
-                    <td>00:23.888</td>
+                    <td class="fastest-time">00:23.888</td>
                     <td>00:23.014</td>
                     <td>00:23.078</td>
                     <td>00:26.791</td>
                     <td>00:23.312</td>
                     <td>00:31.318</td>
                     <td>00:25.025</td>
-                    <td>00:23.408</td>
+                    <td class="fastest-time">00:23.408</td>
                     <td>00:30.780</td>
                     <td><strong>04:12.248</strong></td>
                 </tr>
                 <tr>
                     <td><strong>3</strong></td>
                     <td style="text-align: left;">Iosu Losada Marín</td>
-                    <td>00:21.622</td>
+                    <td class="fastest-time">00:21.622</td>
                     <td>00:24.548</td>
                     <td>00:33.534</td>
                     <td>00:25.195</td>
                     <td>00:27.878</td>
                     <td>00:23.018</td>
-                    <td>00:29.065</td>
+                    <td class="fastest-time">00:29.065</td>
                     <td>00:26.001</td>
                     <td>00:24.860</td>
                     <td>00:32.669</td>
@@ -373,7 +267,7 @@
             <thead>
                 <tr>
                     <th>Rank</th>
-                    <th>Student Name</th>
+                    <th>Name</th>
                     <th>T1 Score</th>
                     <th>T2 Score</th>
                     <th>T3 Score</th>
@@ -384,7 +278,7 @@
                     <th>T8 Score</th>
                     <th>T9 Score</th>
                     <th>T10 Score</th>
-                    <th>Total Score</th>
+                    <th>Total</th>
                 </tr>
             </thead>
             <tbody>
