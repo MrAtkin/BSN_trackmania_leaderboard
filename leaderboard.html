@@ -19,21 +19,24 @@
         .data-table.active { display: block; }
         .fastest-time { color: #27ae60; font-weight: 800; }
         
-        /* 12-PLAYER POOL + WATERFALL GRID BRACKET */
+        /* 12-PLAYER CENTERED ARROW GRID BRACKET */
         .bracket-container { display: grid; grid-template-columns: repeat(6, 200px); gap: 15px 25px; padding: 25px; background-color: #161616; border-radius: 8px; overflow-x: auto; margin-top: 20px; min-width: 1300px; }
         .grid-cell { display: flex; flex-direction: column; gap: 8px; }
         .grid-cell h2 { text-align: center; color: #aaa; font-size: 12px; margin: 0; text-transform: uppercase; letter-spacing: 1px; }
         
+        /* Centered Convergence Map */
         .cell-pa   { grid-column: 1; grid-row: 1; }
         .cell-pb   { grid-column: 1; grid-row: 3; }
         .cell-pc   { grid-column: 1; grid-row: 5; }
+        
         .cell-usfa { grid-column: 2; grid-row: 1; }
         .cell-usfb { grid-column: 2; grid-row: 3; }
         .cell-lq   { grid-column: 2; grid-row: 5; }
-        .cell-lsf  { grid-column: 3; grid-row: 4; }
-        .cell-cf   { grid-column: 4; grid-row: 3; }
-        .cell-dec  { grid-column: 5; grid-row: 2; }
-        .cell-gf   { grid-column: 6; grid-row: 1; }
+        
+        .cell-lsf  { grid-column: 3; grid-row: 5; }
+        .cell-cf   { grid-column: 4; grid-row: 4; }
+        .cell-dec  { grid-column: 5; grid-row: 3; }
+        .cell-gf   { grid-column: 6; grid-row: 2; }
 
         /* 8-PLAYER LEGACY GRID BRACKET (SPRING 2026) */
         .bracket-container-legacy { display: grid; grid-template-columns: repeat(3, 200px); gap: 15px 25px; padding: 25px; background-color: #161616; border-radius: 8px; overflow-x: auto; margin-top: 20px; min-width: 700px; }
