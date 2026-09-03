@@ -19,10 +19,10 @@
         .data-table.active { display: block; }
         .fastest-time { color: #27ae60; font-weight: 800; }
         
-        /* PLAYOFF BRACKET ESPORTS STYLING */
-        .bracket-container { display: flex; justify-content: space-between; padding: 25px; background-color: #161616; border-radius: 8px; overflow-x: auto; min-width: 800px; margin-top: 20px; }
-        .bracket-column { display: flex; flex-direction: column; justify-content: space-around; width: 30%; gap: 30px; }
-        .bracket-column h2 { text-align: center; color: #aaa; font-size: 16px; margin-bottom: 10px; text-transform: uppercase; letter-spacing: 1px; }
+        /* 12-PLAYER BRACKET ESPORTS STYLING */
+        .bracket-container { display: flex; flex-direction: row; padding: 25px; background-color: #161616; border-radius: 8px; overflow-x: auto; min-width: 800px; margin-top: 20px; gap: 30px; }
+        .bracket-column { display: flex; flex-direction: column; justify-content: space-around; width: 25%; gap: 20px; min-width: 220px; }
+        .bracket-column h2 { text-align: center; color: #aaa; font-size: 14px; margin-bottom: 10px; text-transform: uppercase; letter-spacing: 1px; }
         .bracket-match { background-color: #242424; border: 1px solid #333; border-radius: 4px; overflow: hidden; color: white; box-shadow: 0 4px 8px rgba(0,0,0,0.5); }
         .match-player { display: flex; justify-content: space-between; align-items: center; padding: 6px 12px; border-bottom: 1px solid #333; font-size: 14px; height: 20px; }
         .match-player:last-child { border-bottom: none; }
@@ -62,43 +62,37 @@
     </div>
     <div id="times-Summer_2026" class="data-table active"><table><thead><tr><th>Rank</th><th>Name</th><th>T1 Time</th><th>T2 Time</th><th>T3 Time</th><th>T4 Time</th><th>T5 Time</th><th>T6 Time</th><th>T7 Time</th><th>T8 Time</th><th>T9 Time</th><th>T10 Time</th><th>Total</th></tr></thead><tbody><tr><td><strong>1</strong></td><td style="text-align: left;">Mr. Atkin</td><td class="fastest-time">00:19.763</td><td class="fastest-time">00:23.250</td><td class="fastest-time">00:21.451</td><td class="fastest-time">00:22.778</td><td class="fastest-time">00:24.751</td><td class="fastest-time">00:26.808</td><td class="fastest-time">00:24.780</td><td class="fastest-time">00:25.158</td><td class="fastest-time">00:29.634</td><td class="fastest-time">00:32.248</td><td><strong>04:10.621</strong></td></tr></tbody></table></div>
     <div id="scores-Summer_2026" class="data-table"><table><thead><tr><th>Rank</th><th>Name</th><th>T1 Score</th><th>T2 Score</th><th>T3 Score</th><th>T4 Score</th><th>T5 Score</th><th>T6 Score</th><th>T7 Score</th><th>T8 Score</th><th>T9 Score</th><th>T10 Score</th><th>Total</th></tr></thead><tbody><tr><td><strong>1</strong></td><td style="text-align: left;">Mr. Atkin</td><td>150</td><td>150</td><td>150</td><td>150</td><td>150</td><td>150</td><td>150</td><td>150</td><td>150</td><td>150</td><td><strong>1500</strong></td></tr></tbody></table></div>
-    <div id="playoffs-Summer_2026" class="data-table">      <div class="bracket-container">        <div class="bracket-column"><h2>Quarterfinals</h2><div class="bracket-match">
+    <div id="playoffs-Summer_2026" class="data-table">      <div class="bracket-container">        <div class="bracket-column" style="justify-content: flex-start;">          <h2 style="margin-top: 0;">Upper Bracket (1-4)</h2><div class="bracket-match">
 <div class="match-player"><span style="color: #666; font-style: italic;">TBD</span></div>
 <div class="match-player"><span style="color: #666; font-style: italic;">TBD</span></div>
 <div class="match-player"><span style="color: #666; font-style: italic;">TBD</span></div>
 <div class="match-player"><span style="color: #666; font-style: italic;">TBD</span></div>
 </div>
-<div class="bracket-match">
+          <h2>Lower Bracket A (5-8)</h2><div class="bracket-match">
 <div class="match-player"><span style="color: #666; font-style: italic;">TBD</span></div>
 <div class="match-player"><span style="color: #666; font-style: italic;">TBD</span></div>
 <div class="match-player"><span style="color: #666; font-style: italic;">TBD</span></div>
 <div class="match-player"><span style="color: #666; font-style: italic;">TBD</span></div>
 </div>
-<div class="bracket-match">
+          <h2>Lower Bracket B (9-12)</h2><div class="bracket-match">
 <div class="match-player"><span style="color: #666; font-style: italic;">TBD</span></div>
 <div class="match-player"><span style="color: #666; font-style: italic;">TBD</span></div>
 <div class="match-player"><span style="color: #666; font-style: italic;">TBD</span></div>
 <div class="match-player"><span style="color: #666; font-style: italic;">TBD</span></div>
 </div>
-<div class="bracket-match">
+        </div>        <div class="bracket-column" style="justify-content: center;"><h2>Lower Semi-Final</h2><div class="bracket-match">
 <div class="match-player"><span style="color: #666; font-style: italic;">TBD</span></div>
 <div class="match-player"><span style="color: #666; font-style: italic;">TBD</span></div>
 <div class="match-player"><span style="color: #666; font-style: italic;">TBD</span></div>
 <div class="match-player"><span style="color: #666; font-style: italic;">TBD</span></div>
 </div>
-</div>        <div class="bracket-column"><h2>Semifinals</h2><div class="bracket-match">
+</div>        <div class="bracket-column" style="justify-content: center;"><h2>Decider Match</h2><div class="bracket-match">
 <div class="match-player"><span style="color: #666; font-style: italic;">TBD</span></div>
 <div class="match-player"><span style="color: #666; font-style: italic;">TBD</span></div>
 <div class="match-player"><span style="color: #666; font-style: italic;">TBD</span></div>
 <div class="match-player"><span style="color: #666; font-style: italic;">TBD</span></div>
 </div>
-<div class="bracket-match">
-<div class="match-player"><span style="color: #666; font-style: italic;">TBD</span></div>
-<div class="match-player"><span style="color: #666; font-style: italic;">TBD</span></div>
-<div class="match-player"><span style="color: #666; font-style: italic;">TBD</span></div>
-<div class="match-player"><span style="color: #666; font-style: italic;">TBD</span></div>
-</div>
-</div>        <div class="bracket-column"><h2>Grand Final</h2><div class="bracket-match">
+</div>        <div class="bracket-column" style="justify-content: center;"><h2>Grand Final</h2><div class="bracket-match">
 <div class="match-player"><span style="color: #666; font-style: italic;">TBD</span></div>
 <div class="match-player"><span style="color: #666; font-style: italic;">TBD</span></div>
 <div class="match-player"><span style="color: #666; font-style: italic;">TBD</span></div>
@@ -107,43 +101,37 @@
 </div>      </div>    </div>
     <div id="times-Spring_2026" class="data-table "><table><thead><tr><th>Rank</th><th>Name</th><th>T1 Time</th><th>T2 Time</th><th>T3 Time</th><th>T4 Time</th><th>T5 Time</th><th>T6 Time</th><th>T7 Time</th><th>T8 Time</th><th>T9 Time</th><th>T10 Time</th><th>Total</th></tr></thead><tbody><tr><td><strong>1</strong></td><td style="text-align: left;">Bruno Zannelli</td><td>00:21.935</td><td>00:23.891</td><td class="fastest-time">00:22.025</td><td class="fastest-time">00:22.691</td><td class="fastest-time">00:26.667</td><td class="fastest-time">00:22.348</td><td>00:29.152</td><td class="fastest-time">00:24.561</td><td>00:23.848</td><td class="fastest-time">00:29.465</td><td><strong>04:06.583</strong></td></tr><tr><td><strong>2</strong></td><td style="text-align: left;">Gregory Vollmer</td><td>00:21.634</td><td class="fastest-time">00:23.888</td><td>00:23.014</td><td>00:23.078</td><td>00:26.791</td><td>00:23.312</td><td>00:31.318</td><td>00:25.025</td><td class="fastest-time">00:23.408</td><td>00:30.780</td><td><strong>04:12.248</strong></td></tr><tr><td><strong>3</strong></td><td style="text-align: left;">Iosu Losada Marín</td><td class="fastest-time">00:21.622</td><td>00:24.548</td><td>00:33.534</td><td>00:25.195</td><td>00:27.878</td><td>00:23.018</td><td class="fastest-time">00:29.065</td><td>00:26.001</td><td>00:24.860</td><td>00:32.669</td><td><strong>04:28.390</strong></td></tr><tr><td><strong>4</strong></td><td style="text-align: left;">Daniel Gusia</td><td>00:22.848</td><td>00:27.778</td><td>00:27.542</td><td>00:27.894</td><td>00:28.387</td><td>00:26.187</td><td>00:30.992</td><td>00:26.908</td><td>00:25.605</td><td>00:33.675</td><td><strong>04:37.816</strong></td></tr><tr><td><strong>5</strong></td><td style="text-align: left;">Kris Diao</td><td>00:25.421</td><td>00:35.000</td><td>00:27.168</td><td>00:26.921</td><td>00:28.925</td><td>00:28.254</td><td>00:33.860</td><td>00:32.237</td><td>00:28.381</td><td>00:32.970</td><td><strong>04:59.137</strong></td></tr><tr><td><strong>6</strong></td><td style="text-align: left;">Aimar Rouw</td><td>00:22.371</td><td>00:25.930</td><td><span style="color: #e74c3c;">NO TIME</span></td><td>00:25.994</td><td>00:27.132</td><td>00:23.785</td><td>00:31.034</td><td>00:25.745</td><td>00:27.371</td><td><span style="color: #e74c3c;">NO TIME</span></td><td><strong>13:29.362</strong></td></tr><tr><td><strong>7</strong></td><td style="text-align: left;">Leo Pollard</td><td>00:22.514</td><td>00:31.672</td><td>00:37.430</td><td><span style="color: #e74c3c;">NO TIME</span></td><td><span style="color: #e74c3c;">NO TIME</span></td><td>00:26.187</td><td>00:35.531</td><td>00:33.924</td><td>00:29.862</td><td>00:33.515</td><td><strong>14:10.635</strong></td></tr><tr><td><strong>8</strong></td><td style="text-align: left;">Cyrus Chau</td><td>00:22.617</td><td>00:27.175</td><td>00:56.372</td><td><span style="color: #e74c3c;">NO TIME</span></td><td><span style="color: #e74c3c;">NO TIME</span></td><td>00:27.415</td><td>00:35.703</td><td>00:38.332</td><td>00:41.942</td><td>00:38.595</td><td><strong>14:48.151</strong></td></tr><tr><td><strong>9</strong></td><td style="text-align: left;">Achilleas</td><td><span style="color: #e74c3c;">NO TIME</span></td><td>00:28.852</td><td>00:25.417</td><td>00:27.915</td><td>00:28.181</td><td>00:26.833</td><td>00:31.697</td><td>00:28.232</td><td><span style="color: #e74c3c;">NO TIME</span></td><td><span style="color: #e74c3c;">NO TIME</span></td><td><strong>18:17.127</strong></td></tr><tr><td><strong>10</strong></td><td style="text-align: left;">Darius Stamati</td><td><span style="color: #e74c3c;">NO TIME</span></td><td><span style="color: #e74c3c;">NO TIME</span></td><td><span style="color: #e74c3c;">NO TIME</span></td><td>00:24.775</td><td>00:27.112</td><td><span style="color: #e74c3c;">NO TIME</span></td><td>00:30.288</td><td>00:32.559</td><td>00:25.700</td><td><span style="color: #e74c3c;">NO TIME</span></td><td><strong>27:20.434</strong></td></tr><tr><td><strong>11</strong></td><td style="text-align: left;">Aysar Aitihda</td><td><span style="color: #e74c3c;">NO TIME</span></td><td><span style="color: #e74c3c;">NO TIME</span></td><td><span style="color: #e74c3c;">NO TIME</span></td><td><span style="color: #e74c3c;">NO TIME</span></td><td><span style="color: #e74c3c;">NO TIME</span></td><td>00:25.771</td><td><span style="color: #e74c3c;">NO TIME</span></td><td><span style="color: #e74c3c;">NO TIME</span></td><td><span style="color: #e74c3c;">NO TIME</span></td><td><span style="color: #e74c3c;">NO TIME</span></td><td><strong>45:25.771</strong></td></tr><tr><td><strong>12</strong></td><td style="text-align: left;">Jimmy Tzikas</td><td><span style="color: #e74c3c;">NO TIME</span></td><td><span style="color: #e74c3c;">NO TIME</span></td><td><span style="color: #e74c3c;">NO TIME</span></td><td><span style="color: #e74c3c;">NO TIME</span></td><td><span style="color: #e74c3c;">NO TIME</span></td><td>00:28.204</td><td><span style="color: #e74c3c;">NO TIME</span></td><td><span style="color: #e74c3c;">NO TIME</span></td><td><span style="color: #e74c3c;">NO TIME</span></td><td><span style="color: #e74c3c;">NO TIME</span></td><td><strong>45:28.204</strong></td></tr></tbody></table></div>
     <div id="scores-Spring_2026" class="data-table"><table><thead><tr><th>Rank</th><th>Name</th><th>T1 Score</th><th>T2 Score</th><th>T3 Score</th><th>T4 Score</th><th>T5 Score</th><th>T6 Score</th><th>T7 Score</th><th>T8 Score</th><th>T9 Score</th><th>T10 Score</th><th>Total</th></tr></thead><tbody><tr><td><strong>1</strong></td><td style="text-align: left;">Bruno Zannelli</td><td>107</td><td>131</td><td>150</td><td>150</td><td>150</td><td>150</td><td>133</td><td>150</td><td>131</td><td>150</td><td><strong>1402</strong></td></tr><tr><td><strong>2</strong></td><td style="text-align: left;">Gregory Vollmer</td><td>129</td><td>150</td><td>129</td><td>129</td><td>129</td><td>120</td><td>67</td><td>133</td><td>150</td><td>125</td><td><strong>1261</strong></td></tr><tr><td><strong>3</strong></td><td style="text-align: left;">Iosu Losada Marín</td><td>150</td><td>113</td><td>44</td><td>86</td><td>65</td><td>135</td><td>150</td><td>100</td><td>113</td><td>100</td><td><strong>1056</strong></td></tr><tr><td><strong>4</strong></td><td style="text-align: left;">Aimar Rouw</td><td>86</td><td>94</td><td>0</td><td>65</td><td>86</td><td>105</td><td>84</td><td>117</td><td>57</td><td>0</td><td><strong>694</strong></td></tr><tr><td><strong>5</strong></td><td style="text-align: left;">Daniel Gusia</td><td>22</td><td>57</td><td>65</td><td>22</td><td>22</td><td>76</td><td>100</td><td>84</td><td>94</td><td>26</td><td><strong>568</strong></td></tr><tr><td><strong>6</strong></td><td style="text-align: left;">Darius Stamati</td><td>0</td><td>0</td><td>0</td><td>107</td><td>107</td><td>0</td><td>117</td><td>34</td><td>76</td><td>0</td><td><strong>441</strong></td></tr><tr><td><strong>7</strong></td><td style="text-align: left;">Achilleas</td><td>0</td><td>38</td><td>107</td><td>1</td><td>44</td><td>46</td><td>51</td><td>67</td><td>0</td><td>0</td><td><strong>354</strong></td></tr><tr><td><strong>8</strong></td><td style="text-align: left;">Kris Diao</td><td>1</td><td>1</td><td>86</td><td>44</td><td>1</td><td>1</td><td>34</td><td>51</td><td>38</td><td>76</td><td><strong>333</strong></td></tr><tr><td><strong>9</strong></td><td style="text-align: left;">Leo Pollard</td><td>65</td><td>20</td><td>22</td><td>0</td><td>0</td><td>76</td><td>18</td><td>18</td><td>20</td><td>51</td><td><strong>290</strong></td></tr><tr><td><strong>10</strong></td><td style="text-align: left;">Cyrus Chau</td><td>44</td><td>76</td><td>1</td><td>0</td><td>0</td><td>31</td><td>1</td><td>1</td><td>1</td><td>1</td><td><strong>156</strong></td></tr><tr><td><strong>11</strong></td><td style="text-align: left;">Aysar Aitihda</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>90</td><td>0</td><td>0</td><td>0</td><td>0</td><td><strong>90</strong></td></tr><tr><td><strong>12</strong></td><td style="text-align: left;">Jimmy Tzikas</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>16</td><td>0</td><td>0</td><td>0</td><td>0</td><td><strong>16</strong></td></tr></tbody></table></div>
-    <div id="playoffs-Spring_2026" class="data-table">      <div class="bracket-container">        <div class="bracket-column"><h2>Quarterfinals</h2><div class="bracket-match">
-<div class="match-player advancing"><span>Bruno Zannelli</span><span class="player-score">0</span></div>
-<div class="match-player advancing"><span>Kris Diao</span><span class="player-score">0</span></div>
-<div class="match-player "><span>Leo Pollard</span><span class="player-score">0</span></div>
-<div class="match-player"><span style="color: #666; font-style: italic;">TBD</span></div>
-</div>
-<div class="bracket-match">
-<div class="match-player advancing"><span>Gregory Vollmer</span><span class="player-score">0</span></div>
-<div class="match-player advancing"><span>Cyrus Chau</span><span class="player-score">0</span></div>
-<div class="match-player "><span>Achilleas</span><span class="player-score">0</span></div>
-<div class="match-player"><span style="color: #666; font-style: italic;">TBD</span></div>
-</div>
-<div class="bracket-match">
-<div class="match-player advancing"><span>Iosu Losada Marín</span><span class="player-score">0</span></div>
-<div class="match-player advancing"><span>Darius Stamati</span><span class="player-score">0</span></div>
-<div class="match-player "><span>Aysar Aitihda</span><span class="player-score">0</span></div>
-<div class="match-player"><span style="color: #666; font-style: italic;">TBD</span></div>
-</div>
-<div class="bracket-match">
-<div class="match-player advancing"><span>Daniel Gusia</span><span class="player-score">0</span></div>
-<div class="match-player advancing"><span>Aimar Rouw</span><span class="player-score">0</span></div>
-<div class="match-player "><span>Jimmy Tzikas</span><span class="player-score">0</span></div>
-<div class="match-player"><span style="color: #666; font-style: italic;">TBD</span></div>
-</div>
-</div>        <div class="bracket-column"><h2>Semifinals</h2><div class="bracket-match">
+    <div id="playoffs-Spring_2026" class="data-table">      <div class="bracket-container">        <div class="bracket-column" style="justify-content: flex-start;">          <h2 style="margin-top: 0;">Upper Bracket (1-4)</h2><div class="bracket-match">
 <div class="match-player"><span style="color: #666; font-style: italic;">TBD</span></div>
 <div class="match-player"><span style="color: #666; font-style: italic;">TBD</span></div>
 <div class="match-player"><span style="color: #666; font-style: italic;">TBD</span></div>
 <div class="match-player"><span style="color: #666; font-style: italic;">TBD</span></div>
 </div>
-<div class="bracket-match">
+          <h2>Lower Bracket A (5-8)</h2><div class="bracket-match">
 <div class="match-player"><span style="color: #666; font-style: italic;">TBD</span></div>
 <div class="match-player"><span style="color: #666; font-style: italic;">TBD</span></div>
 <div class="match-player"><span style="color: #666; font-style: italic;">TBD</span></div>
 <div class="match-player"><span style="color: #666; font-style: italic;">TBD</span></div>
 </div>
-</div>        <div class="bracket-column"><h2>Grand Final</h2><div class="bracket-match">
+          <h2>Lower Bracket B (9-12)</h2><div class="bracket-match">
+<div class="match-player"><span style="color: #666; font-style: italic;">TBD</span></div>
+<div class="match-player"><span style="color: #666; font-style: italic;">TBD</span></div>
+<div class="match-player"><span style="color: #666; font-style: italic;">TBD</span></div>
+<div class="match-player"><span style="color: #666; font-style: italic;">TBD</span></div>
+</div>
+        </div>        <div class="bracket-column" style="justify-content: center;"><h2>Lower Semi-Final</h2><div class="bracket-match">
+<div class="match-player"><span style="color: #666; font-style: italic;">TBD</span></div>
+<div class="match-player"><span style="color: #666; font-style: italic;">TBD</span></div>
+<div class="match-player"><span style="color: #666; font-style: italic;">TBD</span></div>
+<div class="match-player"><span style="color: #666; font-style: italic;">TBD</span></div>
+</div>
+</div>        <div class="bracket-column" style="justify-content: center;"><h2>Decider Match</h2><div class="bracket-match">
+<div class="match-player"><span style="color: #666; font-style: italic;">TBD</span></div>
+<div class="match-player"><span style="color: #666; font-style: italic;">TBD</span></div>
+<div class="match-player"><span style="color: #666; font-style: italic;">TBD</span></div>
+<div class="match-player"><span style="color: #666; font-style: italic;">TBD</span></div>
+</div>
+</div>        <div class="bracket-column" style="justify-content: center;"><h2>Grand Final</h2><div class="bracket-match">
 <div class="match-player"><span style="color: #666; font-style: italic;">TBD</span></div>
 <div class="match-player"><span style="color: #666; font-style: italic;">TBD</span></div>
 <div class="match-player"><span style="color: #666; font-style: italic;">TBD</span></div>
