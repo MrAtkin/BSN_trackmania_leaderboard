@@ -19,31 +19,37 @@
         .data-table.active { display: block; }
         .fastest-time { color: #27ae60; font-weight: 800; }
         
-        /* 12-PLAYER CENTERED ARROW GRID BRACKET */
+        /* 12-PLAYER CENTERED DOUBLE ELIMINATION GRID */
         .bracket-container { display: grid; grid-template-columns: repeat(6, 200px); gap: 15px 25px; padding: 25px; background-color: #161616; border-radius: 8px; overflow-x: auto; margin-top: 20px; min-width: 1300px; }
         .grid-cell { display: flex; flex-direction: column; gap: 8px; }
         .grid-cell h2 { text-align: center; color: #aaa; font-size: 12px; margin: 0; text-transform: uppercase; letter-spacing: 1px; }
         
-        /* Centered Convergence Map */
+        /* The Overlapping Chevron Pattern */
         .cell-pa   { grid-column: 1; grid-row: 1; }
         .cell-pb   { grid-column: 1; grid-row: 3; }
         .cell-pc   { grid-column: 1; grid-row: 5; }
         
-        .cell-usfa { grid-column: 2; grid-row: 1; }
-        .cell-usfb { grid-column: 2; grid-row: 3; }
+        .cell-usa  { grid-column: 2; grid-row: 1; }
+        .cell-usb  { grid-column: 2; grid-row: 3; }
         .cell-lq   { grid-column: 2; grid-row: 5; }
         
-        .cell-lsf  { grid-column: 3; grid-row: 5; }
-        .cell-cf   { grid-column: 4; grid-row: 4; }
-        .cell-dec  { grid-column: 5; grid-row: 3; }
-        .cell-gf   { grid-column: 6; grid-row: 2; }
+        .cell-ubs  { grid-column: 3; grid-row: 2; }
+        .cell-ls   { grid-column: 3; grid-row: 4; }
+        
+        .cell-ubf  { grid-column: 4; grid-row: 1; }
+        .cell-cf   { grid-column: 4; grid-row: 3; }
+        
+        .cell-dec  { grid-column: 5; grid-row: 2; }
+        
+        /* Center the GF between rows 1 and 2 */
+        .cell-gf   { grid-column: 6; grid-row: 1 / 3; align-self: center; }
 
         /* 8-PLAYER LEGACY GRID BRACKET (SPRING 2026) */
         .bracket-container-legacy { display: grid; grid-template-columns: repeat(3, 200px); gap: 15px 25px; padding: 25px; background-color: #161616; border-radius: 8px; overflow-x: auto; margin-top: 20px; min-width: 700px; }
         .cell-ma { grid-column: 1; grid-row: 1; }
         .cell-mb { grid-column: 1; grid-row: 3; }
         .cell-lb { grid-column: 2; grid-row: 2; }
-        .cell-gf-legacy { grid-column: 3; grid-row: 1; grid-row-end: 3; align-self: center; } 
+        .cell-gf-legacy { grid-column: 3; grid-row: 1 / 3; align-self: center; } 
         
         .bracket-match { background-color: #242424; border: 1px solid #333; border-radius: 4px; overflow: hidden; color: white; box-shadow: 0 4px 8px rgba(0,0,0,0.5); }
         .bracket-match.golden { border: 1px solid #d4af37; box-shadow: 0 0 12px rgba(212, 175, 55, 0.3); }
@@ -88,49 +94,31 @@
     </div>
     <div id="times-Summer_2026" class="data-table active"><table><thead><tr><th>Rank</th><th>Name</th><th>T1 Time</th><th>T2 Time</th><th>T3 Time</th><th>T4 Time</th><th>T5 Time</th><th>T6 Time</th><th>T7 Time</th><th>T8 Time</th><th>T9 Time</th><th>T10 Time</th><th>Total</th></tr></thead><tbody><tr><td><strong>1</strong></td><td style="text-align: left;">Mr. Atkin</td><td class="fastest-time">00:19.763</td><td class="fastest-time">00:23.250</td><td class="fastest-time">00:21.451</td><td class="fastest-time">00:22.778</td><td class="fastest-time">00:24.751</td><td class="fastest-time">00:26.808</td><td class="fastest-time">00:24.780</td><td class="fastest-time">00:25.158</td><td class="fastest-time">00:29.634</td><td class="fastest-time">00:32.248</td><td><strong>04:10.621</strong></td></tr></tbody></table></div>
     <div id="scores-Summer_2026" class="data-table"><table><thead><tr><th>Rank</th><th>Name</th><th>T1 Score</th><th>T2 Score</th><th>T3 Score</th><th>T4 Score</th><th>T5 Score</th><th>T6 Score</th><th>T7 Score</th><th>T8 Score</th><th>T9 Score</th><th>T10 Score</th><th>Total</th></tr></thead><tbody><tr><td><strong>1</strong></td><td style="text-align: left;">Mr. Atkin</td><td>150</td><td>150</td><td>150</td><td>150</td><td>150</td><td>150</td><td>150</td><td>150</td><td>150</td><td>150</td><td><strong>1500</strong></td></tr></tbody></table></div>
-    <div id="playoffs-Summer_2026" class="data-table">      <div class="bracket-container">        <div class="grid-cell cell-pa"><h2>Pool A (Seed 1,6,7,12)</h2><div class="bracket-match">
+    <div id="playoffs-Summer_2026" class="data-table">      <div class="bracket-container">        <div class="grid-cell cell-pa"><h2>Pool A</h2><div class="bracket-match">
 <div class="match-player"><span style="color: #666; font-style: italic;">TBD</span></div>
 <div class="match-player"><span style="color: #666; font-style: italic;">TBD</span></div>
 <div class="match-player"><span style="color: #666; font-style: italic;">TBD</span></div>
 <div class="match-player"><span style="color: #666; font-style: italic;">TBD</span></div>
 </div>
-</div>        <div class="grid-cell cell-pb"><h2>Pool B (Seed 2,5,8,11)</h2><div class="bracket-match">
+</div>        <div class="grid-cell cell-usa"><h2 style="color: #d4af37;">Upper Semi A (Top 4)</h2><div class="bracket-match golden">
 <div class="match-player"><span style="color: #666; font-style: italic;">TBD</span></div>
 <div class="match-player"><span style="color: #666; font-style: italic;">TBD</span></div>
 <div class="match-player"><span style="color: #666; font-style: italic;">TBD</span></div>
 <div class="match-player"><span style="color: #666; font-style: italic;">TBD</span></div>
 </div>
-</div>        <div class="grid-cell cell-pc"><h2>Pool C (Seed 3,4,9,10)</h2><div class="bracket-match">
+</div>        <div class="grid-cell cell-ubf"><h2 style="color: #d4af37;">UB Finals</h2><div class="bracket-match golden">
 <div class="match-player"><span style="color: #666; font-style: italic;">TBD</span></div>
 <div class="match-player"><span style="color: #666; font-style: italic;">TBD</span></div>
 <div class="match-player"><span style="color: #666; font-style: italic;">TBD</span></div>
 <div class="match-player"><span style="color: #666; font-style: italic;">TBD</span></div>
 </div>
-</div>        <div class="grid-cell cell-usfa"><h2 style="color: #d4af37;">Upper Semi A (Top 4)</h2><div class="bracket-match golden">
+</div>        <div class="grid-cell cell-gf"><h2 style="color: #d4af37;">Grand Final</h2><div class="bracket-match golden">
 <div class="match-player"><span style="color: #666; font-style: italic;">TBD</span></div>
 <div class="match-player"><span style="color: #666; font-style: italic;">TBD</span></div>
 <div class="match-player"><span style="color: #666; font-style: italic;">TBD</span></div>
 <div class="match-player"><span style="color: #666; font-style: italic;">TBD</span></div>
 </div>
-</div>        <div class="grid-cell cell-usfb"><h2>Upper Semi B (Mid 4)</h2><div class="bracket-match">
-<div class="match-player"><span style="color: #666; font-style: italic;">TBD</span></div>
-<div class="match-player"><span style="color: #666; font-style: italic;">TBD</span></div>
-<div class="match-player"><span style="color: #666; font-style: italic;">TBD</span></div>
-<div class="match-player"><span style="color: #666; font-style: italic;">TBD</span></div>
-</div>
-</div>        <div class="grid-cell cell-lq"><h2>Lower Quarter (Bot 4)</h2><div class="bracket-match">
-<div class="match-player"><span style="color: #666; font-style: italic;">TBD</span></div>
-<div class="match-player"><span style="color: #666; font-style: italic;">TBD</span></div>
-<div class="match-player"><span style="color: #666; font-style: italic;">TBD</span></div>
-<div class="match-player"><span style="color: #666; font-style: italic;">TBD</span></div>
-</div>
-</div>        <div class="grid-cell cell-lsf"><h2>Lower Semi</h2><div class="bracket-match">
-<div class="match-player"><span style="color: #666; font-style: italic;">TBD</span></div>
-<div class="match-player"><span style="color: #666; font-style: italic;">TBD</span></div>
-<div class="match-player"><span style="color: #666; font-style: italic;">TBD</span></div>
-<div class="match-player"><span style="color: #666; font-style: italic;">TBD</span></div>
-</div>
-</div>        <div class="grid-cell cell-cf"><h2>Challenger Final</h2><div class="bracket-match">
+</div>        <div class="grid-cell cell-ubs"><h2>UB Semi Finals</h2><div class="bracket-match">
 <div class="match-player"><span style="color: #666; font-style: italic;">TBD</span></div>
 <div class="match-player"><span style="color: #666; font-style: italic;">TBD</span></div>
 <div class="match-player"><span style="color: #666; font-style: italic;">TBD</span></div>
@@ -142,7 +130,37 @@
 <div class="match-player"><span style="color: #666; font-style: italic;">TBD</span></div>
 <div class="match-player"><span style="color: #666; font-style: italic;">TBD</span></div>
 </div>
-</div>        <div class="grid-cell cell-gf"><h2 style="color: #d4af37;">Grand Final</h2><div class="bracket-match golden">
+</div>        <div class="grid-cell cell-pb"><h2>Pool B</h2><div class="bracket-match">
+<div class="match-player"><span style="color: #666; font-style: italic;">TBD</span></div>
+<div class="match-player"><span style="color: #666; font-style: italic;">TBD</span></div>
+<div class="match-player"><span style="color: #666; font-style: italic;">TBD</span></div>
+<div class="match-player"><span style="color: #666; font-style: italic;">TBD</span></div>
+</div>
+</div>        <div class="grid-cell cell-usb"><h2>Upper Semi B (Mid 4)</h2><div class="bracket-match">
+<div class="match-player"><span style="color: #666; font-style: italic;">TBD</span></div>
+<div class="match-player"><span style="color: #666; font-style: italic;">TBD</span></div>
+<div class="match-player"><span style="color: #666; font-style: italic;">TBD</span></div>
+<div class="match-player"><span style="color: #666; font-style: italic;">TBD</span></div>
+</div>
+</div>        <div class="grid-cell cell-cf"><h2>Challenger Final</h2><div class="bracket-match">
+<div class="match-player"><span style="color: #666; font-style: italic;">TBD</span></div>
+<div class="match-player"><span style="color: #666; font-style: italic;">TBD</span></div>
+<div class="match-player"><span style="color: #666; font-style: italic;">TBD</span></div>
+<div class="match-player"><span style="color: #666; font-style: italic;">TBD</span></div>
+</div>
+</div>        <div class="grid-cell cell-ls"><h2>Lower Semi</h2><div class="bracket-match">
+<div class="match-player"><span style="color: #666; font-style: italic;">TBD</span></div>
+<div class="match-player"><span style="color: #666; font-style: italic;">TBD</span></div>
+<div class="match-player"><span style="color: #666; font-style: italic;">TBD</span></div>
+<div class="match-player"><span style="color: #666; font-style: italic;">TBD</span></div>
+</div>
+</div>        <div class="grid-cell cell-pc"><h2>Pool C</h2><div class="bracket-match">
+<div class="match-player"><span style="color: #666; font-style: italic;">TBD</span></div>
+<div class="match-player"><span style="color: #666; font-style: italic;">TBD</span></div>
+<div class="match-player"><span style="color: #666; font-style: italic;">TBD</span></div>
+<div class="match-player"><span style="color: #666; font-style: italic;">TBD</span></div>
+</div>
+</div>        <div class="grid-cell cell-lq"><h2>Lower Quarter (Bot 4)</h2><div class="bracket-match">
 <div class="match-player"><span style="color: #666; font-style: italic;">TBD</span></div>
 <div class="match-player"><span style="color: #666; font-style: italic;">TBD</span></div>
 <div class="match-player"><span style="color: #666; font-style: italic;">TBD</span></div>
