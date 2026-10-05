@@ -2,6 +2,7 @@ import sqlite3
 import re
 import os
 import shutil
+import subprocess
 from datetime import datetime
 from generate_website import generate_static_website
 
@@ -544,8 +545,21 @@ def backup_database():
     timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
     backup_path = os.path.join('backups', f'trackmania_times_{timestamp}.db')
     shutil.copy2(DB_FILE, backup_path)
+    
+def sync_from_cloud():
+    print("Checking cloud for database updates...")
+    try:
+        # Pulls the newest database from GitHub before the app even opens
+        result = subprocess.run(['git', 'pull'], capture_output=True, text=True, check=True)
+        if "Already up to date." in result.stdout:
+            print("-> Local database is already up to date.")
+        else:
+            print("-> Successfully downloaded latest data from the cloud!")
+    except Exception as e:
+        print("-> Warning: Could not connect to GitHub (Are you offline?). Proceeding with local data.")
 
 def main():
+    sync_from_cloud()
     conn = init_db()
     while True:
         print(f"\n=== Trackmania Tracker (Active: {ACTIVE_TRACK_SEASON}) ===")

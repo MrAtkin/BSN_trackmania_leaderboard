@@ -92,7 +92,7 @@ def generate_static_website():
             --row-hover: #f1f1f1;
             --input-bg: white;
             
-            --teacher-text: #27ae60;
+            --atkin-text: #27ae60;
             --gold-text: #b58500; 
             --silver-text: #7f8c8d; 
             --bronze-text: #a05a2c; 
@@ -107,7 +107,7 @@ def generate_static_website():
             --row-hover: #2a2a2a;
             --input-bg: #333;
             
-            --teacher-text: #2ecc71;
+            --atkin-text: #2ecc71;
             --gold-text: #d4af37; 
             --silver-text: #bdc3c7; 
             --bronze-text: #cd7f32; 
@@ -131,8 +131,8 @@ def generate_static_website():
         
         #no-data-msg { display: none; text-align: center; margin-top: 40px; font-size: 18px; color: #7f8c8d; font-style: italic; }
         
-        .fastest-time { color: #27ae60; font-weight: 800; }
-        .teacher-time { color: var(--teacher-text); font-weight: 800; }
+        .fastest-time { color: var(--atkin-text); font-weight: 800; }
+        .atkin-time { color: var(--atkin-text); font-weight: 800; }
         .gold-time { color: var(--gold-text); font-weight: 900; }
         .silver-time { color: var(--silver-text); font-weight: 800; }
         .bronze-time { color: var(--bronze-text); font-weight: 800; }
@@ -171,6 +171,7 @@ def generate_static_website():
         .bracket-match.golden .match-player.advancing { background-color: #4a3b0e; }
         
         .player-score { background-color: #111; padding: 2px 6px; border-radius: 4px; font-family: monospace; color: #fff; }
+        .narrow-table { max-width: 750px; margin: 0 auto; }
     </style>
     <script>
         function updateView() {
@@ -514,7 +515,7 @@ def generate_static_website():
     # --- NEW YEARLY OVERALL STANDINGS TABLES RENDERER ---
     for year in years:
         if year in yearly_data and yearly_data[year]:
-            html_content += f'    <div id="overall-{year}" class="data-table"><table><thead><tr><th class="sortable" onclick="sortTable(this, 0)">Rank</th><th class="sortable" onclick="sortTable(this, 1)">Name</th>'
+            html_content += f'    <div id="overall-{year}" class="data-table narrow-table"><table><thead><tr><th class="sortable" onclick="sortTable(this, 0)">Rank</th><th class="sortable" onclick="sortTable(this, 1)">Name</th>'
             for t in ["Winter", "Spring", "Summer", "Fall"]:
                 html_content += f'<th class="sortable" onclick="sortTable(this, {["Winter", "Spring", "Summer", "Fall"].index(t) + 2})">{t} Score</th>'
             html_content += '<th class="sortable" onclick="sortTable(this, 6)">Yearly Total</th></tr></thead><tbody>'
