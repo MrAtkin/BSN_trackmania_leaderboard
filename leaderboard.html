@@ -76,10 +76,9 @@
         th.sort-asc::after { content: '↑'; color: #2ecc71; font-weight: bold; font-size: 14px; }
         th.sort-desc::after { content: '↓'; color: #e74c3c; font-weight: bold; font-size: 14px; }
 
-        .bracket-container { display: grid; grid-template-columns: repeat(5, 200px); gap: 15px 25px; padding: 10px 5px 25px 5px; overflow-x: auto; margin-top: 20px; margin-bottom: 20px; min-width: 1100px; justify-content: center; }
+        .bracket-container { display: grid; grid-template-columns: repeat(5, 200px); gap: 15px 25px; padding: 25px; background-color: #161616; border-radius: 8px; overflow-x: auto; margin-top: 20px; margin-bottom: 20px; min-width: 1100px; justify-content: center; }
         .grid-cell { display: flex; flex-direction: column; gap: 8px; }
-        .grid-cell h2 { text-align: center; color: #888; font-size: 13px; margin: 0; text-transform: uppercase; letter-spacing: 1px; }
-        .grid-cell h2.golden-title { color: var(--gold-text); }
+        .grid-cell h2 { text-align: center; color: #aaa; font-size: 12px; margin: 0; text-transform: uppercase; letter-spacing: 1px; }
         
         .cell-uba  { grid-column: 1; grid-row: 1; }
         .cell-ubb  { grid-column: 1; grid-row: 3; }
@@ -90,14 +89,14 @@
         .cell-lf   { grid-column: 4; grid-row: 3; }
         .cell-gf   { grid-column: 5; grid-row: 2 / 4; align-self: center; }
 
-        .bracket-container-legacy { display: grid; grid-template-columns: repeat(3, 200px); gap: 15px 25px; padding: 10px 5px 25px 5px; overflow-x: auto; margin-top: 20px; margin-bottom: 20px; min-width: 700px; justify-content: center; }
+        .bracket-container-legacy { display: grid; grid-template-columns: repeat(3, 200px); gap: 15px 25px; padding: 25px; background-color: #161616; border-radius: 8px; overflow-x: auto; margin-top: 20px; margin-bottom: 20px; min-width: 700px; justify-content: center; }
         .cell-ma { grid-column: 1; grid-row: 1; }
         .cell-mb { grid-column: 1; grid-row: 3; }
         .cell-lb { grid-column: 2; grid-row: 2; }
         .cell-gf-legacy { grid-column: 3; grid-row: 1 / 3; align-self: center; } 
         
-        .bracket-match { background-color: var(--match-bg); border: 1px solid var(--match-border); border-radius: 6px; overflow: hidden; color: white; box-shadow: 0 4px 6px rgba(0,0,0,0.3); }
-        .bracket-match.golden { border: 1px solid #d4af37; box-shadow: 0 0 10px rgba(212, 175, 55, 0.25); }
+        .bracket-match { background-color: var(--match-bg); border: 1px solid var(--match-border); border-radius: 6px; overflow: hidden; color: white; box-shadow: 0 4px 8px rgba(0,0,0,0.5); }
+        .bracket-match.golden { border: 1px solid #d4af37; box-shadow: 0 0 12px rgba(212, 175, 55, 0.3); }
         
         .match-player { display: flex; justify-content: space-between; align-items: center; padding: 6px 12px; border-bottom: 1px solid #111; font-size: 14px; height: 20px; }
         .match-player:last-child { border-bottom: none; }
@@ -317,25 +316,25 @@
           <tr class="lp-row-hidden extra-row-Fall_2026"><td class="col-place">10</td><td><span class="lp-team-tbd">TBD</span></td><td class="col-pts"></td></tr>
           <tr class="lp-row-hidden extra-row-Fall_2026"><td class="col-place">11</td><td><span class="lp-team-tbd">TBD</span></td><td class="col-pts"></td></tr>
           <tr class="lp-row-hidden extra-row-Fall_2026"><td class="col-place">12</td><td><span class="lp-team-tbd">TBD</span></td><td class="col-pts"></td></tr>
-        </tbody></table>        <div id="toggle-btn-Fall_2026" class="lp-toggle-bar" onclick="toggleStandings('Fall_2026', 12)">place 5 to 12 &#8964;</div>      </div>      <h2>Playoff Bracket</h2>      <div class="bracket-container">        <div class="grid-cell cell-uba"><h2 class="golden-title">Upper Bracket A</h2><div class="bracket-match golden">
+        </tbody></table>        <div id="toggle-btn-Fall_2026" class="lp-toggle-bar" onclick="toggleStandings('Fall_2026', 12)">place 5 to 12 &#8964;</div>      </div>      <h2>Playoff Bracket</h2>      <div class="bracket-container">        <div class="grid-cell cell-uba"><h2 style="color: #d4af37;">Upper Bracket A</h2><div class="bracket-match golden">
 <div class="match-player"><span style="color: #888; font-style: italic;">TBD</span></div>
 <div class="match-player"><span style="color: #888; font-style: italic;">TBD</span></div>
 <div class="match-player"><span style="color: #888; font-style: italic;">TBD</span></div>
 <div class="match-player"><span style="color: #888; font-style: italic;">TBD</span></div>
 </div>
-</div>        <div class="grid-cell cell-ubf"><h2 class="golden-title">UB Final</h2><div class="bracket-match golden">
+</div>        <div class="grid-cell cell-ubf"><h2 style="color: #d4af37;">UB Final</h2><div class="bracket-match golden">
 <div class="match-player"><span style="color: #888; font-style: italic;">TBD</span></div>
 <div class="match-player"><span style="color: #888; font-style: italic;">TBD</span></div>
 <div class="match-player"><span style="color: #888; font-style: italic;">TBD</span></div>
 <div class="match-player"><span style="color: #888; font-style: italic;">TBD</span></div>
 </div>
-</div>        <div class="grid-cell cell-gf"><h2 class="golden-title">Grand Final</h2><div class="bracket-match golden">
+</div>        <div class="grid-cell cell-gf"><h2 style="color: #d4af37;">Grand Final</h2><div class="bracket-match golden">
 <div class="match-player"><span style="color: #888; font-style: italic;">TBD</span></div>
 <div class="match-player"><span style="color: #888; font-style: italic;">TBD</span></div>
 <div class="match-player"><span style="color: #888; font-style: italic;">TBD</span></div>
 <div class="match-player"><span style="color: #888; font-style: italic;">TBD</span></div>
 </div>
-</div>        <div class="grid-cell cell-ubb"><h2 class="golden-title">Upper Bracket B</h2><div class="bracket-match golden">
+</div>        <div class="grid-cell cell-ubb"><h2 style="color: #d4af37;">Upper Bracket B</h2><div class="bracket-match golden">
 <div class="match-player"><span style="color: #888; font-style: italic;">TBD</span></div>
 <div class="match-player"><span style="color: #888; font-style: italic;">TBD</span></div>
 <div class="match-player"><span style="color: #888; font-style: italic;">TBD</span></div>
@@ -383,25 +382,25 @@
           <tr class="lp-row-hidden extra-row-Summer_2026"><td class="col-place">10</td><td><span class="lp-team-tbd">TBD</span></td><td class="col-pts"></td></tr>
           <tr class="lp-row-hidden extra-row-Summer_2026"><td class="col-place">11</td><td><span class="lp-team-tbd">TBD</span></td><td class="col-pts"></td></tr>
           <tr class="lp-row-hidden extra-row-Summer_2026"><td class="col-place">12</td><td><span class="lp-team-tbd">TBD</span></td><td class="col-pts"></td></tr>
-        </tbody></table>        <div id="toggle-btn-Summer_2026" class="lp-toggle-bar" onclick="toggleStandings('Summer_2026', 12)">place 5 to 12 &#8964;</div>      </div>      <h2>Playoff Bracket</h2>      <div class="bracket-container">        <div class="grid-cell cell-uba"><h2 class="golden-title">Upper Bracket A</h2><div class="bracket-match golden">
+        </tbody></table>        <div id="toggle-btn-Summer_2026" class="lp-toggle-bar" onclick="toggleStandings('Summer_2026', 12)">place 5 to 12 &#8964;</div>      </div>      <h2>Playoff Bracket</h2>      <div class="bracket-container">        <div class="grid-cell cell-uba"><h2 style="color: #d4af37;">Upper Bracket A</h2><div class="bracket-match golden">
 <div class="match-player "><span style="">Stefano Gugliuzza</span><span class="player-score">0</span></div>
 <div class="match-player "><span style="">Ivan Balbi</span><span class="player-score">0</span></div>
 <div class="match-player "><span style="">Emile Winne</span><span class="player-score">0</span></div>
 <div class="match-player "><span style="">Sevastian Babin</span><span class="player-score">0</span></div>
 </div>
-</div>        <div class="grid-cell cell-ubf"><h2 class="golden-title">UB Final</h2><div class="bracket-match golden">
+</div>        <div class="grid-cell cell-ubf"><h2 style="color: #d4af37;">UB Final</h2><div class="bracket-match golden">
 <div class="match-player"><span style="color: #888; font-style: italic;">TBD</span></div>
 <div class="match-player"><span style="color: #888; font-style: italic;">TBD</span></div>
 <div class="match-player"><span style="color: #888; font-style: italic;">TBD</span></div>
 <div class="match-player"><span style="color: #888; font-style: italic;">TBD</span></div>
 </div>
-</div>        <div class="grid-cell cell-gf"><h2 class="golden-title">Grand Final</h2><div class="bracket-match golden">
+</div>        <div class="grid-cell cell-gf"><h2 style="color: #d4af37;">Grand Final</h2><div class="bracket-match golden">
 <div class="match-player"><span style="color: #888; font-style: italic;">TBD</span></div>
 <div class="match-player"><span style="color: #888; font-style: italic;">TBD</span></div>
 <div class="match-player"><span style="color: #888; font-style: italic;">TBD</span></div>
 <div class="match-player"><span style="color: #888; font-style: italic;">TBD</span></div>
 </div>
-</div>        <div class="grid-cell cell-ubb"><h2 class="golden-title">Upper Bracket B</h2><div class="bracket-match golden">
+</div>        <div class="grid-cell cell-ubb"><h2 style="color: #d4af37;">Upper Bracket B</h2><div class="bracket-match golden">
 <div class="match-player "><span style="">Iosu Losada Marín</span><span class="player-score">0</span></div>
 <div class="match-player "><span style="">Lorenzo Bossi</span><span class="player-score">0</span></div>
 <div class="match-player "><span style="">Dimitris Voukas</span><span class="player-score">0</span></div>
@@ -445,7 +444,7 @@
           <tr class="lp-row-hidden extra-row-Spring_2026"><td class="col-place">6</td><td><span class="lp-team-name">Achilleas</span></td><td class="col-pts">3 House Points</td></tr>
           <tr class="lp-row-hidden extra-row-Spring_2026"><td class="col-place">7</td><td><span class="lp-team-name">Aimar Rouw</span></td><td class="col-pts">2 House Points</td></tr>
           <tr class="lp-row-hidden extra-row-Spring_2026"><td class="col-place">8</td><td><span class="lp-team-name">Kris Diao</span></td><td class="col-pts">1 House Point</td></tr>
-        </tbody></table>        <div id="toggle-btn-Spring_2026" class="lp-toggle-bar" onclick="toggleStandings('Spring_2026', 8)">place 5 to 8 &#8964;</div>      </div>      <h2>Playoff Bracket</h2>      <div class="bracket-container-legacy">        <div class="grid-cell cell-ma"><h2 class="golden-title">Match A (Top 4)</h2><div class="bracket-match golden">
+        </tbody></table>        <div id="toggle-btn-Spring_2026" class="lp-toggle-bar" onclick="toggleStandings('Spring_2026', 8)">place 5 to 8 &#8964;</div>      </div>      <h2>Playoff Bracket</h2>      <div class="bracket-container-legacy">        <div class="grid-cell cell-ma"><h2 style="color: #d4af37;">Match A (Top 4)</h2><div class="bracket-match golden">
 <div class="match-player advancing"><span style="">Bruno Zannelli</span><span class="player-score">104</span></div>
 <div class="match-player advancing"><span style="">Iosu Losada Marín</span><span class="player-score">103</span></div>
 <div class="match-player "><span style="">Gregory Vollmer</span><span class="player-score">53</span></div>
@@ -463,7 +462,7 @@
 <div class="match-player "><span style="color: #ff6b6b;">Gregory Vollmer</span><span class="player-score">88</span></div>
 <div class="match-player "><span style="color: #ff6b6b;">Achilleas</span><span class="player-score">0</span></div>
 </div>
-</div>        <div class="grid-cell cell-gf-legacy"><h2 class="golden-title">Grand Final</h2><div class="bracket-match golden">
+</div>        <div class="grid-cell cell-gf-legacy"><h2 style="color: #d4af37;">Grand Final</h2><div class="bracket-match golden">
 <div class="match-player advancing"><span style="">Bruno Zannelli</span><span class="player-score">129</span></div>
 <div class="match-player "><span style="">Iosu Losada Marín</span><span class="player-score">128</span></div>
 <div class="match-player "><span style="color: #ff6b6b;">Darius Stamati</span><span class="player-score">127</span></div>
