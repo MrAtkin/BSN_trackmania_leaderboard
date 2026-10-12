@@ -14,6 +14,8 @@
             --border-color: #ddd;
             --row-hover: #f1f1f1;
             --input-bg: white;
+            --match-bg: #2c3e50;
+            --match-border: #1a252f;
             
             --atkin-text: #27ae60;
             --gold-text: #b58500; 
@@ -29,6 +31,8 @@
             --border-color: #333;
             --row-hover: #2a2a2a;
             --input-bg: #333;
+            --match-bg: #2a2a2a;
+            --match-border: #444;
             
             --atkin-text: #2ecc71;
             --gold-text: #d4af37; 
@@ -104,39 +108,41 @@
         body.hide-teachers .teacher-row { display: none !important; }
 
         /* LIQUIPEDIA-STYLE HOUSE POINTS LEADERBOARD */
-        .lp-standings-wrapper { max-width: 750px; margin: 0 auto 35px auto; background: #181a1d; border: 1px solid #2c2f36; border-radius: 6px; overflow: hidden; box-shadow: 0 6px 14px rgba(0,0,0,0.35); color: #e0e0e0; }
+        .lp-standings-wrapper { max-width: 750px; margin: 0 auto 40px auto; background: var(--match-bg); border: 1px solid var(--match-border); border-radius: 6px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.3); color: white; }
         .lp-table { width: 100%; border-collapse: collapse; margin-top: 0; margin-bottom: 0; }
-        .lp-table th { background: #121417; color: #9aa0a6; font-size: 13px; font-weight: bold; padding: 12px 16px; border-bottom: 1px solid #2c2f36; text-align: left; }
+        .lp-table th { background: #111; color: #aaa; font-size: 13px; font-weight: bold; padding: 12px 16px; border-bottom: 1px solid var(--match-border); text-align: left; }
         .lp-table th.col-place { width: 70px; text-align: center; }
         .lp-table th.col-pts { text-align: right; }
-        .lp-table td { padding: 12px 16px; border-bottom: 1px solid #262930; font-size: 14px; text-align: left; color: #e0e0e0; }
+        .lp-table td { padding: 12px 16px; border-bottom: 1px solid #111; font-size: 14px; text-align: left; color: white; }
         .lp-table td.col-place { text-align: center; font-weight: bold; }
         .lp-table td.col-pts { text-align: right; font-weight: bold; color: #fff; }
         
         /* Top 3 Medal Row Highlights */
-        .lp-row-1 { background: rgba(168, 138, 25, 0.22); border-left: 4px solid #d4af37; }
-        .lp-row-2 { background: rgba(91, 112, 120, 0.22); border-left: 4px solid #7a929e; }
-        .lp-row-3 { background: rgba(110, 82, 49, 0.22); border-left: 4px solid #8c673a; }
-        .lp-row-4 { border-left: 4px solid transparent; background: #181a1d; }
-        .lp-row-hidden { display: none; border-left: 4px solid transparent; background: #181a1d; }
+        .lp-row-1 { background: rgba(212, 175, 55, 0.25); border-left: 4px solid #d4af37; }
+        .lp-row-2 { background: rgba(160, 180, 190, 0.25); border-left: 4px solid #9ab0bc; }
+        .lp-row-3 { background: rgba(165, 115, 65, 0.25); border-left: 4px solid #b8864d; }
+        .lp-row-4 { border-left: 4px solid transparent; }
+        .lp-row-hidden { display: none; border-left: 4px solid transparent; background: var(--match-bg); }
         .lp-row-hidden.expanded { display: table-row; }
 
-        .lp-table tr.lp-row-1:hover { background: rgba(168, 138, 25, 0.30); }
-        .lp-table tr.lp-row-2:hover { background: rgba(91, 112, 120, 0.30); }
-        .lp-table tr.lp-row-3:hover { background: rgba(110, 82, 49, 0.30); }
-        .lp-table tr.lp-row-4:hover, .lp-table tr.lp-row-hidden:hover { background: #202327; }
+        /* Prevent global light-mode tr:hover from washing out white text */
+        .lp-table tbody tr:hover { background-color: rgba(255, 255, 255, 0.05); }
+        .lp-table tbody tr.lp-row-1:hover { background: rgba(212, 175, 55, 0.35); }
+        .lp-table tbody tr.lp-row-2:hover { background: rgba(160, 180, 190, 0.35); }
+        .lp-table tbody tr.lp-row-3:hover { background: rgba(165, 115, 65, 0.35); }
 
         /* Place Badges */
         .place-badge { display: inline-block; width: 26px; height: 24px; line-height: 24px; border-radius: 4px; font-weight: bold; font-size: 13px; color: #fff; text-align: center; }
-        .badge-1 { background: #9c8216; }
+        .badge-1 { background: #b59410; }
         .badge-2 { background: #5a6f78; }
-        .badge-3 { background: #6e5231; }
+        .badge-3 { background: #7d5a32; }
 
         .lp-team-name { color: #66b2ff; font-weight: bold; }
-        .lp-team-tbd { color: #777; font-style: italic; }
+        .lp-team-tbd { color: #888; font-style: italic; }
+        .lp-roster { color: #ccc; font-size: 13px; }
 
-        .lp-toggle-bar { background: #121417; text-align: center; padding: 10px; color: #66b2ff; font-weight: bold; font-size: 13px; cursor: pointer; user-select: none; transition: background 0.2s; }
-        .lp-toggle-bar:hover { background: #1f2329; }
+        .lp-toggle-bar { background: #111; text-align: center; padding: 10px; color: #66b2ff; font-weight: bold; font-size: 13px; cursor: pointer; user-select: none; transition: background 0.2s; }
+        .lp-toggle-bar:hover { background: #1c1c1c; }
     </style>
     <script>
         function updateView() {
